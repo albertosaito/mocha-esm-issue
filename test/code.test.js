@@ -1,5 +1,4 @@
 // CommonJS module
-require = require('esm')(module);
 const assert = require('assert');
 
 describe('MyFunction', () => {

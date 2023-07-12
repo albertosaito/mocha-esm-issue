@@ -7,28 +7,19 @@ Install dependencies `npm install`; and run `npm test` You should get this error
 > test
 > mocha
 
+  
   MyFunction
-    1) should work
+Optional chaining worked
+    ✔ should work
 
-  0 passing (9ms)
-  1 failing
 
-  1) MyFunction
-       should work:
-     /Users/saitoa/lifion-code-base/~saitoa/mocha-esm-issue/src/code.js:7
-  if (fs?.chmodSync) {
-         ^
-
-SyntaxError: Invalid or unexpected token
-      at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)
-
+  1 passing (4ms)
 ```
 
-This is because esm module loader does not support a few Node.js features, including __optional chaining__ and __nullish coalescing__
-See: https://github.com/standard-things/esm/issues/866
+This would require to:
 
-Note that other branches in this repo provide potential solutions
+1. Include `@babel/register` and `@babel/preset-env` dev-dependencies and change test script (See: `package.json`)
+2. Add `.babelrc` config file
+3. Remove `esm` references
 
-
-Cheers,
-Alberto
+Cheers, Alberto
