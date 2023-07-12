@@ -1,0 +1,12 @@
+{
+  "name": "mocha-esm-issue",
+  "author": "Me",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "esm": "*",
+    "mocha": "*"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
+}
