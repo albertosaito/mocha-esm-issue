@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "mocha-esm-issue",
   "author": "Me",
   "license": "UNLICENSED",
